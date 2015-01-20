@@ -1,0 +1,17 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+
+  font-size: 0;
+  color: transparent;
+}
+
+.icon-block { display: block; }
+
+@each $i in (32 48 64 72 96 128) {
+  .icon-#{$i} {
+    width: #{$i}px;
+    height: #{$i}px;
+  }
+}

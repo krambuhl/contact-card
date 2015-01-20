@@ -1,0 +1,28 @@
+.heading {
+  padding: 15px 20px 20px 20px;
+  margin-bottom: 10px;
+  background: white;
+  color: black;
+}
+
+.heading-main {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.4em;
+}
+
+.heading-alt {  
+  font-weight: normal;
+  font-family: $fontstack-serif;
+}
+
+
+@include respond(0, 600px) {
+  .heading-main {
+    font-size: 32px;
+  }
+
+  .heading-alt {  
+    font-size: 85%;
+  }
+}

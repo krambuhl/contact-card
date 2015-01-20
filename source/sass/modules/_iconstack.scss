@@ -1,0 +1,27 @@
+.iconstack {
+  position: relative;
+}
+
+.iconstack-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.iconstack-static {
+  @extend .iconstack-item;
+  position: relative; 
+  opacity: 1; 
+}
+
+.iconstack-alt {
+  @extend .iconstack-item;
+  opacity: 0; 
+}
+
+.iconstack.is-active {
+  .iconstack-static { opacity: 0; }
+  .iconstack-alt { opacity: 1; }
+}
