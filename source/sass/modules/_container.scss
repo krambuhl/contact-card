@@ -1,0 +1,17 @@
+.container {
+  padding: 30px 20px 30px 20px;
+}
+
+.container-alt {
+  background: white;
+  color: #222;
+}
+
+.container-header {
+  @extend .heading-small;
+  margin-bottom: 20px;
+  
+  &.is-hidden {
+    display: none;
+  }
+}

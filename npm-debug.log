@@ -1,24 +1,24 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'build' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'serve' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
-5 info prebuild stumptown-bear@10.0.0
-6 info build stumptown-bear@10.0.0
+4 verbose run-script [ 'preserve', 'serve', 'postserve' ]
+5 info preserve stumptown-bear@10.0.0
+6 info serve stumptown-bear@10.0.0
 7 verbose unsafe-perm in lifecycle true
-8 info stumptown-bear@10.0.0 Failed to exec build script
-9 error stumptown-bear@10.0.0 build: `npm run icons && broccoli build html`
-9 error Exit status 1
-10 error Failed at the stumptown-bear@10.0.0 build script.
+8 info stumptown-bear@10.0.0 Failed to exec serve script
+9 error stumptown-bear@10.0.0 serve: `broccoli serve`
+9 error Exit status 8
+10 error Failed at the stumptown-bear@10.0.0 serve script.
 10 error This is most likely a problem with the stumptown-bear package,
 10 error not with npm itself.
 10 error Tell the author that this fails on your system:
-10 error     npm run icons && broccoli build html
+10 error     broccoli serve
 10 error You can get their info via:
 10 error     npm owner ls stumptown-bear
 10 error There is likely additional logging output above.
 11 error System Darwin 14.0.0
-12 error command "node" "/usr/local/bin/npm" "run" "build"
+12 error command "node" "/usr/local/bin/npm" "run" "serve"
 13 error cwd /Users/evan/Sites/stb/contact-card
 14 error node -v v0.10.32
 15 error npm -v 1.4.28

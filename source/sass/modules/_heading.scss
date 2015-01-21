@@ -1,14 +1,12 @@
-.heading {
-  padding: 15px 20px 20px 20px;
-  margin-bottom: 10px;
-  background: white;
-  color: black;
-}
-
 .heading-main {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.4em;
+}
+
+.heading-small {
+  font-size: 32px;
+  line-height: 1.3em;
 }
 
 .heading-alt {  
@@ -20,6 +18,12 @@
 @include respond(0, 600px) {
   .heading-main {
     font-size: 32px;
+    line-height: 1.3em;
+  }
+  
+  .heading-small {
+    font-size: 24px;
+    line-height: 1.2em;
   }
 
   .heading-alt {  

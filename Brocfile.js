@@ -1,9 +1,10 @@
 var mergeTrees = require('broccoli-merge-trees');
-var watchify = require('broccoli-watchify');
 var pickFiles = require('broccoli-static-compiler');
 var compileSass = require('broccoli-sass');
 var autoprefixer = require('broccoli-autoprefixer');
+var es6transpiler = require('broccoli-es6-transpiler');
 var imagemin = require('broccoli-imagemin');
+var browserify = require('broccoli-browserify');
 
 
 /*
@@ -30,12 +31,12 @@ var minImg = imagemin(images);
   Javascript
 */
 
-var scripts = watchify('source/scripts', {
-  browserify: {
-    entries: ['./main.js'],
-    debug: true
-  },
-  outputFile: 'assets/bundle.js'
+var es5ified = es6transpiler('source/scripts');
+
+var scripts = browserify(es5ified, {
+  entries: ['./main.js'],
+  outputFile: 'assets/bundle.js',
+  debug: true
 });
 
 /*

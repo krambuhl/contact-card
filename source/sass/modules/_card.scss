@@ -1,33 +1,27 @@
 .card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  margin-left: 20px;
+  flex: 0 1 96px;
+  
+  height: 96px;
+  
+  overflow: hidden;
+  transition-property: flex;
+  
+  background-color: #222;
+}
 
-  display: inline-block;
-  padding: 40px;
+.card-wrapper {
+  display: block;
+  width: 1000px;
 
   color: white;
   text-decoration: none;
-  text-align: center;
-  
-  border: 1px solid white;
-  
-  &:hover {
-    background-color: white;
-    color: black;
+  text-align: left;
+}
 
-    .iconstack-static { 
-      position: absolute; 
-      opacity: 0; 
-    }
-
-    .iconstack-alt { 
-      position: relative; 
-      opacity: 1; 
-    }
-  }
+.card-iconstack,
+.card-content {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .card-title {
@@ -42,16 +36,37 @@
   font-family: $fontstack-serif;
 }
 
+.card-small {
+  font-size: 75%;
+}
+
 .card-icon {
   width: 96px;
   height: 96px;
-  
-  margin-bottom: 12px;
+  transition-property: width, height;
 }
 
-@include respond(0, 533px) {
-  .card-icon {
-    width: 80px;
-    height: 80px;
-  }  
+.card:hover {
+  // width: 172px;
+  // height: 256px;
+  
+  background-color: #222;
+  border-color: darken(#47985c, 10);
+  color: white;
+  
+  flex: 0 1 320px;
+  
+  padding-bottom: 20px;
+  
+  // .card-icon {
+  //   width: 148px;
+  //   height: 148px;
+  // }
 }
+
+// @include respond(0, 533px) {
+//   .card-icon {
+//     width: 72px;
+//     height: 72px;
+//   }  
+// }

@@ -1,5 +1,23 @@
 .l-contacts {
+  padding: 0;
+  overflow: scroll;
+}
+
+.l-contacts-header {
+  padding: 20px 20px 0 20px;
+  margin-bottom: 0;
+}
+
+.l-contacts-list {
+  // width: 1000%;
+  padding: 20px 20px 20px 20px;
   display: flex;
-  max-width: 960px;
-  padding: 10px 0;
+  
+  align-items: top;
+  justify-content: left;
+  align-content: space-between;
+  flex-wrap: wrap;
+  
+  list-style: none;
+  // height: 96px + 40px;
 }
