@@ -1,23 +1,16 @@
 var socket = require('socket.io-client')('http://localhost:4201');
 var ready = require('domready');
-var Bank = require('message-bank');
 
-var Contacts = require('./contacts');
-
-var kram = {
-  bank: new Bank()
-};
-
-kram.bank.subscribe('CONTACTS', function(data, opts) {
-  console.log(kram.bank._store);
-});
-
+var bank = require('./bank.js');
+var TwitterView = require('./twitter/index.js');
 
 socket.on('data', function(data) {
-  // console.log(data, kram.bank._store);
-  kram.bank.dispatch(data);
+  bank.dispatch(data);
 });
 
 
+window.kram = {
+  bank: bank,
+  twitter: new TwitterView('.l-twitter') 
+};
 
-window.kram = kram;
